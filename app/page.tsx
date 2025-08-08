@@ -2,14 +2,12 @@ import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import './ui/global.css'
+import LeafletMap from '../components/LeafletMap';
 
 export default function Page() {
   return (
   <>
-  <head>
-    <title>Good Kebab</title>
-  </head>
-    <body>
+  
       <nav className="bg-red-600 text-white px-6 py-4 flex justify-between items-center">
         <div className="text-xl font-bold">
           Mr Kebab
@@ -27,7 +25,7 @@ export default function Page() {
       <p className={`text-xl text-gray-800 md:leading-normal`}>
             <strong>Trouve les kebabs les moins chers autour de toi!</strong> 
       </p>
-      <div className="h-8"></div>
+      <LeafletMap />
     </main>
     <footer className="bg-gray-800 text-white px-6 py-8 mt-12">
      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -44,7 +42,6 @@ export default function Page() {
         </div>
       </div>
     </footer>
-    </body>
     </>
   );
 }
